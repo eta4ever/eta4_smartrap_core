@@ -8,3 +8,6 @@ Remix, remake or fork of Smartrap Core (https://www.youmagine.com/designs/smartc
 Frame - уголки для сборки рамы из люминя.  Frame corners.
 
 XY - переделанные крепления двигателей и роликов XY. Modified XY motors and rollers mounts. xy_left, xy_right, xy2_left_right
+
+
+Unmodified - не затронутые переделками оригинальные детали, выгруженные из OpenJSCAD и пропущенные через netfabb для Slic3r. Untouched parts exported from OpenJSCAD and repaired in netfabb for Slic3r.
