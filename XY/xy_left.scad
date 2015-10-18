@@ -2,6 +2,28 @@ $fa=5; $fs=0.1;
 
 profile=15.2;
 
+module motor(){
+	mwidth=42.3;
+	mheight=48;
+	difference(){
+		union(){
+			cube([mwidth, mwidth, mheight], center=true);
+			translate([0, 0, mheight/2+1]) cylinder(h=2, r=11, center=true);
+			translate([0, 0, mheight/2+12]) cylinder(h=24, r=2.5, center=true);
+		}
+		union(){
+			translate([-15.5, -15.5, mheight/2 - 2.25]) cylinder(h=4.51, r=1.5, center=true);
+			translate([-15.5, 15.5, mheight/2 - 2.25]) cylinder(h=4.51, r=1.5, center=true);
+			translate([15.5, -15.5, mheight/2 - 2.25]) cylinder(h=4.51, r=1.5, center=true);
+			translate([15.5, 15.5, mheight/2 - 2.25]) cylinder(h=4.51, r=1.5, center=true);
+		}
+	}//difference
+}//module
+
+
+// motor test
+//translate([0, -24, -24]) motor();
+
 //test tube
 //translate([5+profile/2, 5+profile/2, 0]) color("Red", 0.5) cube([profile, profile, 100], center=true);
 
