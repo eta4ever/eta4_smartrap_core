@@ -22,7 +22,7 @@ module motor(){
 
 
 // motor test
-//translate([0, -24, -24]) motor();
+//translate([41, -24, 0]) rotate([-90,0,0]) motor();
 
 //test tube
 //translate([5+profile/2, 5+profile/2, 0]) color("Red", 0.5) cube([profile, profile, 100], center=true);
