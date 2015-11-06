@@ -1,7 +1,13 @@
-Ремикс, ремейк, форк, или как там это называется 3D-принтера Smartrap Core v.1.2 (https://www.youmagine.com/designs/smartcore). Основная идея - использование 15-миллиметрового алюминиевого квадрата в качестве рамы. ХЗ, что из этого хорошего получится, может быть, жесткость будет Г.
+Ремикс, ремейк, форк, или как там это называется 3D-принтера Smartrap Core v.1.2 (https://www.youmagine.com/designs/smartcore). Основная идея - использование 15-миллиметрового алюминиевого квадрата в качестве рамы. 
+
+Надо делать боковые стенки. Как минимум с боков, а лучше еще и сзади и снизу и вообще все закрывать.
+
+Что касается прошивки: взят релиз Marlin, актуальный на ноябрь 2015. Настроен на CoreXY, 190x190x190, по X и Y ремни GT2, на Z шпилька М5, экструдер МК8, все драйверы 1/16. Плюс Reprap Discount Full Graphic Controller.
+
+Девайсина работает, обзор: http://3dtoday.ru/blogs/eta4ever/kubocore-my-variation-smartcore/
 
 
-Remix, remake or fork of Smartrap Core v.1.2 (https://www.youmagine.com/designs/smartcore), at ze very beginnin.
+Remix, remake or fork of Smartrap Core v.1.2 (https://www.youmagine.com/designs/smartcore).
 
 ----
 
