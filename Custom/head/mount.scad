@@ -9,11 +9,16 @@ module hexagon(in_diam, height) {
 
 difference(){
 	union(){
-		cube([35, 12, 55]); // head mounting plate
+		cube([35, 12, 55]); // основная пластина
 		
-		translate([-12.5,-15,41]) cube([31,27,9]); //e3d mount
+		translate([-12.5,-15,41]) cube([31,27,9]); // крепление e3d
 		translate([3,-15, 45.5]) cylinder(h=9, r=15.5, center=true);
 
+		hull(){ // ухо под крепление обдува зоны печати
+			translate([3, -35.5, 45.5]) rotate([0, 90, 0]) cylinder(h=10, r=5, center=true); 
+			translate([3, -29, 45.5]) cube([10, 1, 9], center=true);		
+		}
+		
 		translate([17,-15, 9]) cube([29,27,9]); //endstop mount
 		translate([31.5,-15, 13.5]) cylinder(h=9, r=14.5, center=true);
 	}
@@ -43,6 +48,8 @@ difference(){
 		translate([14, -7, 49]) cube([6, 3, 5], center=true);
 		translate([14, -7, 45.5]) rotate([90, 90, 0]) hexagon(6,3);
 
+		translate([3, -35.5, 45.5]) rotate([0, 90, 0]) cylinder(h=10.1, r=1.75, center=true);  // отверстие в ухе крепления обдува
+
 		translate([3, -15, 50]) scale([1.01, 1.01, 1.01]) e3dv6(); //вырезать из всего этого экструдер
 
 	}
@@ -52,5 +59,6 @@ difference(){
 translate([3, -15, 50]) color([1,0,0]) e3dv6(); // экструдер
 translate([-25, -15, 24]) rotate([90,0,90]) color([0,0.5,0.5]) import("fan_mount.stl", convexity=3); // обдув экструдера
 translate([31.5, -15, 30]) color([0,0,0.7]) cylinder(h=70, r=9, center=true); // датчик
-
-translate([-45,-15,20]) rotate([0,100,0]) color([0.5,0.7,0]) import("printzone cooler.stl", convexity=3); //обдув зоны печати
+translate([3,-55,18]) rotate([0,100,90]) color([0.5,0.7,0]) import("side_cooler.stl", convexity=3); //обдув зоны печати
+translate([-3.5, -35.5, 45.5]) rotate([90, -167.8, 90]) color([0.4,0.4,0.4]) import("side_cooler_plank.stl", convexity=3); // крепеж обдува зоны печати
+translate([9.5, -35.5, 45.5]) rotate([90, -167.8, 90]) color([0.4,0.4,0.4]) import("side_cooler_plank.stl", convexity=3);
