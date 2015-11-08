@@ -16,10 +16,10 @@ difference(){
 		translate([-55, -15, 25]) cube([12,10,50], center=true);
 		translate([55, -15, 25]) cube([12,10,50], center=true);
 
-		translate([0, 0, 25]) cube([80, 10, 50], center=true); // перемычка
+		translate([0, 5, 25]) cube([74, 10, 50], center=true); // перемычка
 
 		hull(){
-			translate([0, -15, 10]) cylinder(h=20, r=15, center=true); // под tr8x8
+			translate([0, -10, 10]) cylinder(h=20, r=15, center=true); // под tr8x8
 			translate([0, 0, 10]) cube([30, 1, 20], center=true);
 		}
 
@@ -33,8 +33,8 @@ difference(){
 
 	union(){
 
-		translate([0, -15, 10]) {	// под ходовинт
-			cylinder(h=20.1, r=4.5, center=true); 
+		translate([0, -10, 10]) {	// под ходовинт
+			cylinder(h=20.1, r=5.3, center=true); 
 			translate([-5.675, -5.675, 0]) cylinder(h=20.1, r=1.75, center=true); 
 			translate([-5.675, 5.675, 0]) cylinder(h=20.1, r=1.75, center=true);
 			translate([5.675, -5.675, 0]) cylinder(h=20.1, r=1.75, center=true);
