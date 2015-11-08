@@ -21,6 +21,7 @@ module motor(){
 mw=42.3;
 prof=15.2;
 
+rotate([0,90,0])
 difference(){
 	
 	union(){
