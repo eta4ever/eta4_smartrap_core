@@ -27,7 +27,7 @@
 
 #ifndef LANGUAGE_INCLUDE
   // pick your language from the list above
-  #define LANGUAGE_INCLUDE GENERATE_LANGUAGE_INCLUDE(ru)
+  #define LANGUAGE_INCLUDE GENERATE_LANGUAGE_INCLUDE(en)
 #endif
 
 #define PROTOCOL_VERSION "1.0"
