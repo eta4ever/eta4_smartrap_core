@@ -6,6 +6,12 @@
 
 Девайсина работает, обзор: http://3dtoday.ru/blogs/eta4ever/kubocore-my-variation-smartcore/
 
+----------
+
+2015-12-16
+
+Направляющие Z на 110 мм, откосины на боковины по две штуки (профиль длиной 180 мм, угловые соединители 45.stl в Frame). Стало почти отлично.
+Обзор доработок http://3dtoday.ru/blogs/eta4ever/kubocore-progress/
 
 ----------
 
