@@ -75,10 +75,8 @@ difference(){
 		translate([outL-wall/2+R, wall+17, wall+intH/2]) rotate([0, 90, 0]) cylinder(h=wall+0.05, r=12, center=true);
 
 		// перфорация боковины
-		for (x_pos = [R+wall+2*perfR+5 : 12 : R+wall+intL-2*perfR-5]){
-			for (z_pos = [8: 15: 25]){
-				translate([x_pos, wall/2, z_pos]) rotate([90, 0, 0]) cylinder(r=perfR, h=wall+0.2, center=true);
-			}
+		for (x_pos = [R+wall+2*perfR+5 : 10 : R+wall+intL-2*perfR-5]){
+				translate([x_pos, wall/2, 16]) rotate([90, 0, 0]) cylinder(r=perfR, h=wall+0.2, center=true);
 		}
 	}
 }
