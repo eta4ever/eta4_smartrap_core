@@ -78,6 +78,9 @@ difference(){
 		for (x_pos = [R+wall+2*perfR+5 : 10 : R+wall+intL-2*perfR-5]){
 				translate([x_pos, wall/2, 16]) rotate([90, 0, 0]) cylinder(r=perfR, h=wall+0.2, center=true);
 		}
+
+		// под USB
+		translate([R+wall+9+135-16-13/2, outW+wall/2, wall+4+1.5+12/2]) cube([13, wall+0.1, 12], center=true);
 	}
 }
 
