@@ -5,7 +5,7 @@ R=2;
 perfR=1.75;
 intL=143+40;
 intW=84+30;
-intH=30;
+intH=4;
 
 outL=intL+2*wall;
 outW=intW+2*wall;
@@ -44,64 +44,16 @@ difference(){
 		}
 	
 		// перфорация раз
-		for (x_pos = [R+wall+2*perfR : 6 : R+wall+intL-2*perfR]){
-			for (y_mul = [0: 3: 9]){
-				translate([x_pos, R+wall+(2+y_mul)*perfR, wall/2]) cube([perfR*2, perfR*2, wall+0.05], center=true);
-			}
-		}
-		
-		// под плату	
-		translate([R+wall+9, R+wall+27, wall/2]){
-			cylinder(r=1.8, h=wall+0.05, center=true);
-			translate([135, 0, 0]) cylinder(r=1.8, h=wall+0.05, center=true);
-			translate([0, 76, 0]) cylinder(r=1.8, h=wall+0.05, center=true);
-			translate([135, 76, 0]) cylinder(r=1.8, h=wall+0.05, center=true);	
-		}
-
-		// перфорация два
-		for (x_pos = [R+wall+15+135+2*perfR : 6 : R+wall+intL-2*perfR]){
+		for (x_pos = [R+wall+2*perfR+5 : 6 : R+wall+intL-2*perfR-5]){
 			for (y_mul = [0: 3: 60]){
 				translate([x_pos, R+wall+(2+y_mul)*perfR, wall/2]) cube([perfR*2, perfR*2, wall+0.05], center=true);
 			}
 		}
-
+		
 		// под винты крышки
 		translate([R+2, R+2, outH/2]) cylinder(r=1.75, h=outH+0.05, center=true);
 		translate([R+2, intW+wall, outH/2]) cylinder(r=1.75, h=outH+0.05, center=true);
 		translate([R+intL, R+2, outH/2]) cylinder(r=1.75, h=outH+0.05, center=true);
 		translate([R+intL, intW+wall, outH/2]) cylinder(r=1.75, h=outH+0.05, center=true);
-
-		// под провода
-		translate([outL-wall/2+R, wall+17, wall+intH/2]) rotate([0, 90, 0]) cylinder(h=wall+0.05, r=12, center=true);
-
-		// перфорация боковины
-		for (x_pos = [R+wall+2*perfR+5 : 12 : R+wall+intL-2*perfR-5]){
-			for (z_pos = [8: 15: 25]){
-				translate([x_pos, wall/2, z_pos]) rotate([90, 0, 0]) cylinder(r=perfR, h=wall+0.2, center=true);
-			}
-		}
 	}
 }
-
-//упоры под плату
-difference(){
-	union(){
-		translate([R+wall+9, R+wall+27, wall+2]){
-			cylinder(r=3.5, h=4, center=true);
-			translate([135, 0, 0]) cylinder(r=3.5, h=4, center=true);
-			translate([0, 76, 0]) cylinder(r=3.5, h=4, center=true);
-			translate([135, 76, 0]) cylinder(r=3.5, h=4, center=true);
-		}
-	}
-
-	union(){
-		translate([R+wall+9, R+wall+27, wall+2]){
-			cylinder(r=1.8, h=4+0.05, center=true);
-			translate([135, 0, 0]) cylinder(r=1.8, h=4+0.05, center=true);
-			translate([0, 76, 0]) cylinder(r=1.8, h=4+0.05, center=true);
-			translate([135, 76, 0]) cylinder(r=1.8, h=4+0.05, center=true);
-		}
-
-	}
-}
-
