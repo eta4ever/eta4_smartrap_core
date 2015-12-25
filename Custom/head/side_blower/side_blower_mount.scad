@@ -27,5 +27,6 @@ difference(){
 		translate([bloW/2, 0, 0]) cylinder(h=3, r=1.75, center=true);
 
 		//под винт вухо
+		translate([0, 15, 5-1.5]) rotate([0,90,0]) cylinder(h=uhoW+6, r=1.75, center=true);
 	}
 }
