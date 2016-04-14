@@ -33,7 +33,7 @@
 // SERIAL_PORT selects which serial port should be used for communication with the host.
 // This allows the connection of wireless adapters (for instance) to non-default port pins.
 // Serial port 0 is still used by the Arduino bootloader regardless of this setting.
-#define SERIAL_PORT 2
+#define SERIAL_PORT 0
 
 // This determines the communication speed of the printer
 #define BAUDRATE 115200
@@ -123,10 +123,10 @@
 // The minimal temperature defines the temperature below which the heater will not be enabled It is used
 // to check that the wiring to the thermistor is not broken.
 // Otherwise this would lead to the heater being powered on all the time.
-#define HEATER_0_MINTEMP 5
-#define HEATER_1_MINTEMP 5
-#define HEATER_2_MINTEMP 5
-#define BED_MINTEMP 5
+#define HEATER_0_MINTEMP 0
+#define HEATER_1_MINTEMP 0
+#define HEATER_2_MINTEMP 0
+#define BED_MINTEMP 0
 
 // When temperature exceeds max temp, your heater will be switched off.
 // This feature exists to protect your hotend from overheating accidentally, but *NOT* from thermistor short/failure!
@@ -482,10 +482,10 @@ const bool Z_MAX_ENDSTOP_INVERTING = true; // set to true to invert the logic of
 // default settings
 
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   {80,80,4000,100}  // M5
-#define DEFAULT_AXIS_STEPS_PER_UNIT   {80,80,400,100} // TR8x8
+#define DEFAULT_AXIS_STEPS_PER_UNIT   {160,160,400,100} // TR8x8 // 1/32 xy
 // #define DEFAULT_MAX_FEEDRATE          {100, 400, 2.5, 50}    // (mm/sec)
 // #define DEFAULT_MAX_ACCELERATION      {1000,1000,100,1000}    // X, Y, Z, E maximum start speed for accelerated moves. E default values are good for Skeinforge 40+, for older versions raise them a lot.
-#define DEFAULT_MAX_FEEDRATE          {500, 500, 2.5, 100}
+#define DEFAULT_MAX_FEEDRATE          {1000, 1000, 2.5, 100}
 #define DEFAULT_MAX_ACCELERATION      {1000,1000,100,1000} 
 
 #define DEFAULT_ACCELERATION          2000    // X, Y, Z and E max acceleration in mm/s^2 for printing moves
@@ -554,7 +554,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = true; // set to true to invert the logic of
 
 // The RepRapDiscount Smart Controller (white PCB)
 // http://reprap.org/wiki/RepRapDiscount_Smart_Controller
-//#define REPRAP_DISCOUNT_SMART_CONTROLLER
+#define REPRAP_DISCOUNT_SMART_CONTROLLER
 
 // The GADGETS3D G3D LCD/SD Controller (blue PCB)
 // http://reprap.org/wiki/RAMPS_1.3/1.4_GADGETS3D_Shield_with_Panel
